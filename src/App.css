@@ -1,0 +1,15 @@
+.fondo{
+  background: radial-gradient(50% 50% at 50% 50%, #D5F3FF 0%, #51B4E8 100%);
+}
+
+.card{
+  background: linear-gradient(89.52deg, #E6F2FF 0.45%, #D5F3FF 97.05%);
+}
+
+.dark main{
+  background: radial-gradient(50% 50% at 50% 50%, #53388F 0%, #2F2958 100%);
+
+}
+
+  
+
