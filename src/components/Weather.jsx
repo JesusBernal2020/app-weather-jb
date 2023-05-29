@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { kelvinToCelcius, kelvinToFahrenheit } from '../utils/temp'
+import './styles/buton.css'
 
 const weatherImages = {
     '01d': '/images/weather/dia1.png',
@@ -55,14 +56,22 @@ const Weather = ({ weatherInfo, handleSubmmit }) => {
         <div>
             <h1 className='font-clima text-xl font-semibold pb-6 sm:p-0 min-[400px]:text-2xl sm:text-lg'>Weather App</h1>
         </div>
-        <div className='sm:order-3'>
-                    <button onClick={handleDarkMode}>{isDark ? <i class='bx bxs-sun sm:text-3xl'></i> : <i class='bx bxs-moon'></i>}
-                    </button>
+                <div className='sm:order-3'>
+
+                    <label class="switch">
+                        <input onClick={handleDarkMode} type="checkbox"/>
+                        <span class="slider"></span>
+                    </label>
+                            
         </div>
+                        
+                        
+                        
+
                 <div className='flex justify-center'>
                     <form onSubmit={handleSubmmit}>
                         <button className='w-10 h-[35px] rounded-l-lg shadow-inner shadow-[#d5f3fff6] bg-[#52B5E8] dark:bg-[#201F3C] dark:shadow-[#18172d] sm:w-10 min-[400px]:h-11'><i className='bx bx-search text-base'></i></button>
-            <input id='city' placeholder='Busca una ciudad' className=' w-60 sm:w h-[35px] rounded-r-lg shadow-inner shadow-[#D5F3FF] bg-[#52B5E8] dark:bg-[#201F3C] dark:shadow-[#18172d] p-2 outline-none min-[400px]:w-72 min-[400px]:h-11 sm:w-96 sm:mr-16'  type="text" />
+            <input id='city' placeholder='Busca una ciudad' className=' w-60 sm:w h-[35px] rounded-r-lg shadow-inner shadow-[#D5F3FF] bg-[#52B5E8] dark:bg-[#201F3C] dark:shadow-[#18172d] p-2 outline-none min-[400px]:w-72 min-[400px]:h-11 sm:w-96 sm:mr-2'  type="text" />
                     </form>
             
         </div>
@@ -88,7 +97,7 @@ const Weather = ({ weatherInfo, handleSubmmit }) => {
         </article>
     </section>
     <section>
-        <button onClick={handleChangeIsTemp} className='bg-[#38a1d8] dark:bg-[#7d69f1] px-10 py-2 rounded-xl shadow-lg shadow-[#5a96b5] dark:shadow-[#241f42eb] font-clima font-semibold min-[400px]:text-xl sm:text-2xl'>Cambiar a F° / C°</button>
+        <button onClick={handleChangeIsTemp} className='button bg-[#38a1d8] dark:bg-[#7d69f1] px-10 py-2 rounded-xl shadow-lg shadow-[#5a96b5] dark:shadow-[#241f42eb] font-clima font-semibold min-[400px]:text-xl sm:text-2xl'>Cambiar a F° / C°</button>
       </section>
             
         </>
