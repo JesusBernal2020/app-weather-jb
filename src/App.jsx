@@ -33,8 +33,7 @@ function App() {
       .then(({ data }) => setWeatherInfo(data))
       .catch((err) => console.log(err))
   }
-
-
+  
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(success)
 
@@ -42,14 +41,9 @@ function App() {
 
   return (
     <main className='fondo  min-h-screen text-white flex flex-wrap flex-col items-center justify-around justify-items-center bg-backgclima'>
-      {/* weatherinfo */}
-      
       {
         weatherInfo ? <Weather weatherInfo={weatherInfo} handleSubmmit={handleSubmmit} /> : <Loader />
       }
-
-    
-
     </main>
   )
 }
