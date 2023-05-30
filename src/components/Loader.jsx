@@ -16,7 +16,7 @@ const Loader = () => {
             </div>
         </div>
             <div>
-                <span className='font-clima font-semibold'>Weather App</span>
+                <span className='font-clima font-semibold text-3xl'>Weather App</span>
             </div>
             </>
     )
